@@ -1,0 +1,90 @@
+.nav {
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    background-color: #FFC2BB;
+}
+
+.nav input {
+    margin-right: 1rem;
+    text-align: center;
+    
+}
+.nav button {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.nav .selector {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.container1 {
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.container2 {
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+
+
+@media only screen and (max-width: 480px) {
+    .sm-4 {
+        width: 100%;
+    }
+
+    .sm-3 {
+        width: 75%;
+    }
+
+    .sm-2 {
+        width: 40%;
+    }
+
+    .sm-1 {
+        width: 15%;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1025px) {
+    .med-4 {
+        width: 100%
+    }
+
+    .med-2 {
+        width: 43%;
+    }
+
+    .med-1 {
+        width: 18%;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    
+}
+
+@media only screen and (min-width: 1026px) and (max-width: 1570px) {
+    .lg-4 {
+        width: 1000px;
+    }
+} 
+
+@media only screen and (min-width: 1571px) {
+    .xlg-3 {
+        width: 1000px;
+        margin-right: 3%;
+    }
+
+    .xlg-1 {
+        width: 33%;
+        float: right;
+    }
+}

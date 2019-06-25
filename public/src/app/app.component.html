@@ -1,0 +1,30 @@
+<h1 class="bg-info p-3 text-white text-center">Collaborative Whiteboard</h1>
+
+        <div class="container1 sm-4 med-4 lg-4 xlg-3">
+            
+            <div class='nav sm-4 med-4 lg-4'>
+                <input class="sm-4 med-4" type='text' (colorPickerChange)="update(color)" (colorPickerSelect)="update(color)" [cpFallbackColor]="000000" [cpOKButton]="true" [cpOKButtonClass]= "'btn btn-primary btn-xs'" [(colorPicker)]="color" [style.background]="color" [cpPosition]= "'bottom'" value="Pick a Color" />
+                <button (click)="microify()" class="btn btn-secondary med-1 sm-1">Tiny</button>
+                <button (click)="smallify()" class="btn btn-secondary med-1 sm-1">Small</button>
+                <button (click)="medify()" class="btn btn-secondary med-1 sm-1">Med</button>
+                <button (click)="bigify()" class="btn btn-secondary med-1 sm-1">Large</button>
+                <div class="btn-group btn-group-toggle selector med-2 sm-2" data-toggle="buttons" >
+                    <label class="btn btn-primary active" (click)="draw(color)">
+                        <input type="radio" name="options" autocomplete="off" checked > Draw
+                    </label>
+                    <label class="btn btn-primary" (click)="eraser()">
+                        <input type="radio" name="options" autocomplete="off"> Erase
+                    </label>
+                </div>
+                <button (click)="clear()" class="btn btn-danger med-2 sm-2">Clear</button>
+            </div>
+            
+            <app-canvas [(markerColor)] = "selectedColor" [size]="selectedSize"> </app-canvas>
+        </div>
+        
+        <div class="container2 sm-4 med-4 lg-4 xlg-1">
+            <app-chat class="m-3"></app-chat>
+        </div>
+        
+    <router-outlet></router-outlet>
+    
